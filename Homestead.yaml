@@ -5,7 +5,7 @@ cpus: 1
 provider: virtualbox
 
 folders:
-    - map: .
+    - map: d:/phpstorm/Theatre_Assignment
       to: /home/vagrant/Code
 
 sites:

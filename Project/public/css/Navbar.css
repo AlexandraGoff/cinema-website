@@ -1,0 +1,150 @@
+/* Navigation Bar CSS*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    position: sticky;
+    z-index: 99999;
+    background-color: #24252A;
+    border-bottom: 1px solid #FFDF6C;
+}
+/* Underlining effect in menu */
+.link-effect::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFDF6C;
+    transition: width .3s;
+    /*#8EE4AF*/
+}
+/* Hover effect */
+.link-effect:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+.container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.container img {
+    width: 100%;
+    height: 80%;
+    display: block;
+}
+/* Logo margin */
+.logo {
+    margin-left: 15px;
+
+}
+/* Font Awesome icon*/
+.fa-user-circle {
+    color: #fcf10e;
+}
+/* Navigation Links*/
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+}
+
+.nav-links li {
+    list-style: none;
+    padding-right: 30px;
+}
+/* Nav-Links styling */
+.nav-links a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+/* Burger menu for when the screen gets smaller */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+/* Div for every burger menu line */
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+/* Media Query for screen max width of 1024px */
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 50%;
+    }
+}
+/* Media Query for screen max width of 768px */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 60vh;
+        top: 8vh;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .logo {
+        padding-right: 120px;
+    }
+
+}
+/* When user clicks on burger menu, the menu will move to the right side of the screen*/
+.nav-active {
+    transform: translateX(0%);
+    background: #24252A;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+/* CSS for burger menu transforming into an "X" shape when clicked on*/
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0046bc8d-7824-4922-9170-f61f487e46ef" name="Virtual Server" url="http://192.168.10.10/welcome">
+        <fileTransfer mountedRoot="D:\phpstorm\Theatre_Assignment\Project\public\welcome" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
